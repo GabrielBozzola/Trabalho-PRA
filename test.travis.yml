@@ -1,3 +1,5 @@
-language: java
-rmv:
- - 9.0.1
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+ - rbx-3
