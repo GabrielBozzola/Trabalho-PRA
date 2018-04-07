@@ -11,7 +11,13 @@ package buscapalavras;
  */
 public class NaiveBusca {
     
-    public static boolean search(String texto, String palavra){
+    /**
+     *
+     * @param texto
+     * @param palavra
+     * @return
+     */
+    public boolean search(String texto, String palavra){
         int tamanhoTexto = texto.length();
         int tamanhoPalavra = palavra.length();
         
@@ -28,6 +34,9 @@ public class NaiveBusca {
             }
         }
         return false;
+    }
+
+    public NaiveBusca() {
     }
     
 }

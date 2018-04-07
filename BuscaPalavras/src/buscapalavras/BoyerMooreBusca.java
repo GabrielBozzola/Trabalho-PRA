@@ -9,23 +9,16 @@ package buscapalavras;
  *
  * @author matheus
  */
-public class Manager {
-
-    private static String palavra;
-
+public class BoyerMooreBusca {
+    
     /**
      *
-     * @return palavra
-     */
-    public static String getPalavra() {
-        return palavra;
-    }
-
-    /**
-     *
+     * @param texto
      * @param palavra
+     * @return
      */
-    public static void setPalavra(String palavra) {
-        Manager.palavra = palavra;
+    public boolean search(String texto, String palavra){
+        return false;
     }
+    
 }
