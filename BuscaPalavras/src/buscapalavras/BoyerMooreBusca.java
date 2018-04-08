@@ -5,6 +5,8 @@
  */
 package buscapalavras;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author matheus
@@ -13,11 +15,14 @@ public class BoyerMooreBusca {
     
     /**
      *
-     * @param texto
+     * @param textoArray
      * @param palavra
      * @return
      */
-    public boolean search(String texto, String palavra){
+    public boolean search(ArrayList<String> textoArray, String palavra){
+         for(String texto : textoArray){
+             
+         }
         return false;
     }
     

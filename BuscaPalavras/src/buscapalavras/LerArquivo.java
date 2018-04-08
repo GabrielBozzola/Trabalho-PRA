@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class LerArquivo {
     private static String textoCompleto = "";
+    private static ArrayList<String> textoCompletoArray = new ArrayList();
     private static final ArrayList<String> nomeArquivos = new ArrayList();
     
     /**
@@ -74,20 +75,18 @@ public class LerArquivo {
         inciaString();
         
         nomeArquivos.forEach((String nome) -> {
+            textoCompleto=null;
             try {
-                FileReader arq = new FileReader(nome);
-                BufferedReader lerArq = new BufferedReader(arq);
+                BufferedReader lerArq = new BufferedReader(new FileReader(nome));
                 
                 String linha;
-                linha = lerArq.readLine();
-                //StringBuilder linha = new StringBuilder();
                 
-                while (linha != null) {  
+                while ((linha=lerArq.readLine()) != null) {  
                     textoCompleto += linha+"\n";
-                    linha=lerArq.readLine();
-
                 }
-                arq.close();
+                textoCompletoArray.add(textoCompleto);
+                lerArq.close();
+                
 
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, "Erro na abertura do arquivo: " + e.getMessage());
@@ -99,8 +98,8 @@ public class LerArquivo {
      *
      * @return textoCompleto
      */
-    public static String getTextoCompleto(){
-        return textoCompleto;
+    public static ArrayList<String> getTextoCompleto(){
+        return textoCompletoArray;
     }
     
 }
