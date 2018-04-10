@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class LerArquivo {
     private static String textoCompleto = "";
-    private static ArrayList<String> textoCompletoArray = new ArrayList();
+    private static final ArrayList<String> textoCompletoArray = new ArrayList();
     private static final ArrayList<String> nomeArquivos = new ArrayList();
     
     /**
@@ -87,7 +87,6 @@ public class LerArquivo {
                 textoCompletoArray.add(textoCompleto);
                 lerArq.close();
                 
-
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, "Erro na abertura do arquivo: " + e.getMessage());
             }

@@ -7,7 +7,6 @@ package App;
 
 import buscapalavras.Cronometro;
 import buscapalavras.LerArquivo;
-import buscapalavras.Manager;
 import buscapalavras.NaiveBusca;
 
 /**
@@ -100,7 +99,7 @@ public class NaiveMenu extends javax.swing.JFrame {
     private void iniciaBusca(){
         boolean resultado;
         Cronometro.setInicio(System.currentTimeMillis());
-        resultado = naive.search(LerArquivo.getTextoCompleto(),Manager.getPalavra());
+        resultado = naive.search(LerArquivo.getTextoCompleto(),Menu.getCampoPalavraChave());
         Cronometro.setFim(System.currentTimeMillis());
         duracaoBusca.setText(Cronometro.getDuracao());
         if(resultado){

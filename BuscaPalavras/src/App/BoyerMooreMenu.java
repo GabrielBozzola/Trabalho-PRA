@@ -8,7 +8,6 @@ package App;
 import buscapalavras.BoyerMooreBusca;
 import buscapalavras.Cronometro;
 import buscapalavras.LerArquivo;
-import buscapalavras.Manager;
 
 /**
  *
@@ -100,7 +99,7 @@ public class BoyerMooreMenu extends javax.swing.JFrame {
         
         boolean resultado;
         Cronometro.setInicio(System.currentTimeMillis());
-        resultado = boyerMoore.search(LerArquivo.getTextoCompleto(),Manager.getPalavra());
+        resultado = boyerMoore.search(LerArquivo.getTextoCompleto(),Menu.getCampoPalavraChave());
         Cronometro.setFim(System.currentTimeMillis());
         duracaoBusca.setText(Cronometro.getDuracao());
         

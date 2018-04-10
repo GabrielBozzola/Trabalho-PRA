@@ -40,8 +40,4 @@ public class NaiveBusca {
         return false;
         
     }
-
-    public NaiveBusca() {
-    }
-    
 }

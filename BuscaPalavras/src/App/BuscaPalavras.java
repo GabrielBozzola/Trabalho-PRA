@@ -9,7 +9,7 @@ import buscapalavras.Cronometro;
 import buscapalavras.LerArquivo;
 
 /**
- *
+ * 
  * @author matheus
  */
 public class BuscaPalavras {

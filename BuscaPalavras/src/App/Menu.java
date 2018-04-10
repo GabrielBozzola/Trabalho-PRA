@@ -5,8 +5,6 @@
  */
 package App;
 
-import buscapalavras.Manager;
-
 /**
  *
  * @author matheus
@@ -37,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         labelPlavraChave = new javax.swing.JLabel();
         labelTitulo = new javax.swing.JLabel();
         duracaoLeitura = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        labelTempoDuracao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,7 +74,7 @@ public class Menu extends javax.swing.JFrame {
 
         duracaoLeitura.setText("duracaoLeitura");
 
-        jLabel1.setText("Tempo de leitura:");
+        labelTempoDuracao.setText("Tempo de leitura:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +95,7 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(botaoKMP, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botaoBoyerMoore, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(labelTempoDuracao)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(duracaoLeitura))))
                     .addGroup(layout.createSequentialGroup()
@@ -128,7 +126,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
+                            .addComponent(labelTempoDuracao)
                             .addComponent(duracaoLeitura))
                         .addContainerGap())))
         );
@@ -137,27 +135,31 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
+    /**
+     * 
+     * @param duracaoLeitura
+     */
     public void setDuracaoLeitura(String duracaoLeitura) {
         this.duracaoLeitura.setText(duracaoLeitura);
     }
+
+    public static String getCampoPalavraChave() {
+        return campoPalavraChave.getText();
+    }
     
     private void botaoBoyerMooreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBoyerMooreActionPerformed
-        Manager.setPalavra(campoPalavraChave.getText());
         new BoyerMooreMenu().setVisible(true);
     }//GEN-LAST:event_botaoBoyerMooreActionPerformed
 
     private void botaoKMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoKMPActionPerformed
-        Manager.setPalavra(campoPalavraChave.getText());
         new KnuthMorrisPartMenu().setVisible(true);
     }//GEN-LAST:event_botaoKMPActionPerformed
 
     private void botaoRabinKarpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoRabinKarpActionPerformed
-        Manager.setPalavra(campoPalavraChave.getText());
         new RabinKarpMenu().setVisible(true);
     }//GEN-LAST:event_botaoRabinKarpActionPerformed
 
     private void botaoNaiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoNaiveActionPerformed
-        Manager.setPalavra(campoPalavraChave.getText());
         new NaiveMenu().setVisible(true);
     }//GEN-LAST:event_botaoNaiveActionPerformed
     
@@ -167,10 +169,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton botaoKMP;
     private javax.swing.JButton botaoNaive;
     private javax.swing.JButton botaoRabinKarp;
-    private javax.swing.JTextField campoPalavraChave;
+    private static javax.swing.JTextField campoPalavraChave;
     private javax.swing.JLabel duracaoLeitura;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelPlavraChave;
+    private javax.swing.JLabel labelTempoDuracao;
     private javax.swing.JLabel labelTitulo;
     // End of variables declaration//GEN-END:variables
 }

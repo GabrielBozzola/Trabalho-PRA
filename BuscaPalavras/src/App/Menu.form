@@ -40,7 +40,7 @@
                           <Component id="botaoKMP" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="botaoBoyerMoore" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelTempoDuracao" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="duracaoLeitura" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -80,7 +80,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelTempoDuracao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="duracaoLeitura" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -124,6 +124,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="campoPalavraChave">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="labelPlavraChave">
       <Properties>
@@ -143,7 +146,7 @@
         <Property name="text" type="java.lang.String" value="duracaoLeitura"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="labelTempoDuracao">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tempo de leitura:"/>
       </Properties>

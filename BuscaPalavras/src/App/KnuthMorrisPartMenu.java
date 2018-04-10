@@ -8,7 +8,6 @@ package App;
 import buscapalavras.Cronometro;
 import buscapalavras.KnuthMorrisPartBusca;
 import buscapalavras.LerArquivo;
-import buscapalavras.Manager;
 
 /**
  *
@@ -100,7 +99,7 @@ public class KnuthMorrisPartMenu extends javax.swing.JFrame {
     private void iniciaBusca(){
         boolean resultado;
         Cronometro.setInicio(System.currentTimeMillis());
-        resultado = knuthMorrisPart.search(LerArquivo.getTextoCompleto(),Manager.getPalavra());
+        resultado = knuthMorrisPart.search(LerArquivo.getTextoCompleto(),Menu.getCampoPalavraChave());
         Cronometro.setFim(System.currentTimeMillis());
         duracaoBusca.setText(Cronometro.getDuracao());
         if(resultado){

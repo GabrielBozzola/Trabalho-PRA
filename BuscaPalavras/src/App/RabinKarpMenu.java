@@ -7,7 +7,6 @@ package App;
 
 import buscapalavras.Cronometro;
 import buscapalavras.LerArquivo;
-import buscapalavras.Manager;
 import buscapalavras.RabinKarpBusca;
 
 /**
@@ -101,7 +100,7 @@ public class RabinKarpMenu extends javax.swing.JFrame {
     private void iniciaBusca(){
         boolean resultado;
         Cronometro.setInicio(System.currentTimeMillis());
-        resultado = rabinKarp.search(LerArquivo.getTextoCompleto(),Manager.getPalavra());
+        resultado = rabinKarp.rabinKarp(LerArquivo.getTextoCompleto(),Menu.getCampoPalavraChave());
         Cronometro.setFim(System.currentTimeMillis());
         duracaoBusca.setText(Cronometro.getDuracao());
         
